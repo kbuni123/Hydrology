@@ -1,6 +1,6 @@
-# Hydrology
+# Hydropower energy modeling tool
 
-Hydropower System Performance and Financial Analysis Script
+Hydropower System Performance and Financial Analysis Modeling script 
 ============================================================
 
 This script performs a comprehensive analysis of a hydropower system, calculating
