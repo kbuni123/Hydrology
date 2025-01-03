@@ -54,7 +54,7 @@ The model currently supports Pelton turbines, but I am planning to add more turb
 *Pelton Turbine Efficiency Calculations:**
 - Turbine Peak Efficiency: $$e_p= 0.864 . D^{0.04}$$
 - Peak Efficiency Flow: $$Q_p = (0.662 + 0.001 × j) . Q_{design}$$
-- Efficiency at Specific Flow : $$e_q = e_p (1 - (1.31 + 0.025 j) . |\frac{ Q_p - Q }{ Q_p}|^{5.6 + 0.4 j})
+- Efficiency at Specific Flow : $$e_t = e_p (1 - (1.31 + 0.025 j) . |\frac{ Q_p - Q }{ Q_p}|^{5.6 + 0.4 j})
 $$
 
 
@@ -63,11 +63,18 @@ Power and Energy output Calculation
 - Actual power P available from the small hydro plant at any given flow value Q is given by the following equation:
 
 
-$$P = ρ  .g  .Q_{values}  .H_{net} . e_{t} . e_{g} .(1 - l_{t}) .(1 - l_{para})$$
+$$P = ρ  .g  .Q_{values}  .H_{net} . e_{t} . e_{g} .(1 - l_{t}) .(1 - l_{para})$$ 
 
+Where:
+- $H_{net}$= Net head
+- $l_{t}$ = transformer losses
+- $l_{para}$= parasitic losses
+- $e_{g}$=generator effeciency (user input)
+  
 
 - Net head calculation:
 $$H_{net} = H_{rated} - H_{loss} - H_{tailwater}$$
+
 
 **Hydraulic Losses and Tailwater Effects:**
 
